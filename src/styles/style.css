@@ -36,12 +36,14 @@ body {
 
 #front,
 #back {
+  padding: 20px;
   background-color: rgb(224, 224, 224);
   height: 100%;
   width: 100%;
   border-radius: 2rem;
+  border-style: groove;
   box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-  position: absolute;
+  position: absolute; 
   backface-visibility: hidden;
 }
 
@@ -81,6 +83,14 @@ body {
 
 #prox { 
   margin-left: 50px;
+}
+
+.seta-esquerda {
+  font-size: 4em;
+}
+
+.seta-direita {
+  font-size: 4em;
 }
 
 /* Efeito de hover */

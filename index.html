@@ -4,10 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <title>Flip Card</title>
 </head>
 <body>
-  <button class="button" id="ant" onclick="antCart()">Anterior</button>
+  <button class="button" id="ant" onclick="antCart()">
+    <div class="seta-esquerda">
+      <img src="src/images/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg">
+    </div>
+  </button>
   <div class="container">
     <div class="card">
       <div id="front">
@@ -15,9 +22,17 @@
       <div id="back">
       </div>
     </div>
-    <center><button class="button" id="vira" type="button" onclick="FlipCard()">Virar</button></center>
+    <center>
+      <button class="button" id="vira" type="button" onclick="FlipCard()">
+        <img src="src/images/autorenew_FILL0_wght400_GRAD0_opsz24.svg">
+      </button>
+    </center>
   </div>
-  <button class="button" id="prox" onclick="proxCart()">Próximo</button>
+  <button class="button" id="prox" onclick="proxCart()">
+    <div class="seta-direita">
+      <img src="src/images/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg">
+    </div>
+  </button>
 
   <script type="text/javascript" src="src/js/javascript.js"> </script>
 </body>
