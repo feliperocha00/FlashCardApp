@@ -196,7 +196,7 @@ var indiceCartao = 0;
 const colors = ['#ffff99', '#99ff99', '#6699ff', '#ff99ff', '#ff9999']
 
 frente.innerHTML = cartao1.termo;
-frente.setAttribute("style", "background-color: #ffff99; color: #595959; text-align: left; font-size: 3em;")
+frente.setAttribute("style", "background-color: #ffff99; color: #595959; text-align: left; font-size: 3em; word-wrap: break-word;")
 
 verso.innerHTML = cartao1.definicao;
 verso.setAttribute("style", "background-color: #ffff99; color: #595959; text-align: left; font-size: 2em")

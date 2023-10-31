@@ -15,6 +15,14 @@ body {
   align-items: center;
 }
 
+.cabecalho {
+  position: fixed;
+  text-align: left;
+  top: 0;
+  left: 0;
+  margin: 20px 20px;
+}
+
 .container {
   width: 300px;
   height: 450px;
