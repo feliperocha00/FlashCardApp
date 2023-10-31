@@ -86,13 +86,10 @@ body {
 }
 
 .seta-esquerda {
-  background-image: url("https://fonts.googleapis.com/icon?family=Material+Icons&icon=arrow_forward_ios");
-  rotate: 180deg;
   font-size: 4em;
 }
 
 .seta-direita {
-  background-image: url("https://fonts.googleapis.com/icon?family=Material+Icons&icon=arrow_forward_ios");
   font-size: 4em;
 }
 
