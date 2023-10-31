@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cartões de Estudo COBIT 2019</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="formatacao.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="centered-box">
+                <h1>Cartões de Estudo (Flashcards) Princípios do COBIT 2019</h1>
+                <h4>Objetivo de governaça / Gestão</h4>
+                <div id="frentedocartao">
+                    <!-- Aqui o código javascript exibirá o nome do princípio   -->
+                </div><br/>
+                <hr><br/>
+                <h4>Dominio</h4>
+                <div id="versodocartao">
+                    <!-- aqui o código javascript exibirá a definição do princípio -->
+                </div><br/>
+                <div id ="botoesManipuladores">
+                    <!-- esses botões percorrem a pilha de cartões e viram um cartão -->
+                    <button class="button" id="ant" onclick="antCart()">Anterior</button>
+                    <button class="button" id="vira" type="button" onclick="virar()">Virar</button>
+                    <button class="button" id="prox" onclick="proxCart()">Próximo</button>
+                </div>    
+            </div>
+        </div>
+    <script type="text/javascript" src="codigojs.js" > </script>
+</body>
+</html>
