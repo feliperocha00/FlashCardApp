@@ -190,41 +190,78 @@ var meusCartoes = [cartao1, cartao2, cartao3, cartao4, cartao5, cartao6, cartao7
                    cartao14, cartao15, cartao16, cartao17, cartao18, cartao19, cartao20, cartao21, cartao22, cartao23, cartao24, cartao25,
                    cartao26, cartao27, cartao28, cartao29, cartao30, cartao31, cartao32, cartao33, cartao34, cartao35, cartao36, cartao37,
                    cartao38, cartao39, cartao40];
+
 var indiceCartao = 0;
 
+const colors = ['#ffff99', '#99ff99', '#6699ff', '#ff99ff', '#ff9999']
+
 frente.innerHTML = cartao1.termo;
-frente.setAttribute("style", "color: black; text-align: center")
+frente.setAttribute("style", "background-color: #ffff99; color: #595959; text-align: left; font-size: 3em;")
+
 verso.innerHTML = cartao1.definicao;
-verso.setAttribute("style", "color: black; text-align: center")
+verso.setAttribute("style", "background-color: #ffff99; color: #595959; text-align: left; font-size: 2em")
 // Nao precisa esconder nesse método de cartão animado
 // verso.style.visibility = "hidden";
 
 function proxCart() {
   const card = document.querySelector(".card");
+  
   const style = window.getComputedStyle(card);
+  
+  // Gera um número aleatório dentro do intervalo de tamanho da lista de cores.
+  const randomIndex = Math.floor(Math.random() * colors.length);
+
+  // Usa o número aleatório para selecionar uma cor da lista de cores.
+  const randomColor = colors[randomIndex];
+
+  // Atribui a cor selecionada como background-color do .card
+  frente.style.backgroundColor = randomColor;
+  verso.style.backgroundColor = randomColor;
+
   var angle = style.transform;
+
   // Validação para verificar se o cartao esta virado e desviralo para passar pro proximo item
   if (angle === 'matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)') {
     card.style.transform = card.style.transform === "rotateY(180deg)" ? "rotateY(0)" : "rotateY(180deg)"; 
   } 
+  
   indiceCartao = (indiceCartao + 1) % meusCartoes.length;
+  
   frente.innerHTML = meusCartoes[indiceCartao].termo;
+  
   verso.innerHTML = meusCartoes[indiceCartao].definicao;
 }
+
 function antCart() {
   const card = document.querySelector(".card");
+
   const style = window.getComputedStyle(card);
+
+  // Gera um número aleatório dentro do intervalo de tamanho da lista de cores.
+  const randomIndex = Math.floor(Math.random() * colors.length);
+
+  // Usa o número aleatório para selecionar uma cor da lista de cores.
+  const randomColor = colors[randomIndex];
+
+  // Atribui a cor selecionada como background-color do .card
+  frente.style.backgroundColor = randomColor;
+  verso.style.backgroundColor = randomColor;
+
   var angle = style.transform;
+
   if (indiceCartao > 0) {
     indiceCartao = (indiceCartao - 1);
   } else if (indiceCartao === 0){ 
     indiceCartao = meusCartoes.length-1;
-  } 
+  }
+
   // Validação para verificar se o cartao esta virado e desviralo para passar pro proximo item
   if (angle === 'matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)') {
     card.style.transform = card.style.transform === "rotateY(180deg)" ? "rotateY(0)" : "rotateY(180deg)";  
   }
+
   frente.innerHTML = meusCartoes[indiceCartao].termo;
+
   verso.innerHTML = meusCartoes[indiceCartao].definicao;
 }
 

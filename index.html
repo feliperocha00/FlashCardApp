@@ -4,10 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Flip Card</title>
 </head>
 <body>
-  <button class="button" id="ant" onclick="antCart()">Anterior</button>
+  <button class="button" id="ant" onclick="antCart()">
+    <div class="seta-esquerda">
+    </div>
+  </button>
   <div class="container">
     <div class="card">
       <div id="front">
@@ -17,7 +24,10 @@
     </div>
     <center><button class="button" id="vira" type="button" onclick="FlipCard()">Virar</button></center>
   </div>
-  <button class="button" id="prox" onclick="proxCart()">Próximo</button>
+  <button class="button" id="prox" onclick="proxCart()">
+    <div class="seta-direita">
+    </div>
+  </button>
 
   <script type="text/javascript" src="src/js/javascript.js"> </script>
 </body>
